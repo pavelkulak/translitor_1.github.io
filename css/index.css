@@ -1,0 +1,186 @@
+/* Основные стили для body */
+body {
+    font-family: "IBM Plex Mono", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+/* Заголовок */
+h1 {
+    font-weight: 600;
+    font-size: 40px;
+    color: #4520AB;
+    text-align: center;
+    margin-top: 44px; 
+    margin-bottom: 86px;
+}
+
+/* Обертка для input */
+.input-wrapper {
+    position: relative;
+    width: 500px;
+    height: 56px;
+}
+
+/* Стили для input */
+input {
+    width: calc(100% - 32px); 
+    height: calc(100% - 2 * 2px);
+    padding-left: 26px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 14px;
+    border: 2px solid black; 
+}
+
+/* Кнопка для отправки данных */
+.input-button {
+    position: absolute;
+    top: calc(50% - 38px / 2);
+    left: calc(100% - 113px);
+    background-color: black;
+    color: white;
+    width: 107px;
+    height: 38px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Таблица */
+table {
+    margin-top: 60px;
+    width: 500px;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Контент ячеек */
+.cell-content1 {
+    display: flex;
+    position: relative;
+    padding: 0 11px;
+    align-items: center;
+}
+
+.cell-content2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 11px;
+    align-items: center;
+    position: relative;
+}
+
+/* Нумерация строк */
+.num {
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Стили для первой колонки */
+.column1 {
+    background-color: #F0F0F0;
+    width: calc(500px / 2 - 4px); 
+    height: 40px;
+    border-right: 2px solid black;
+}
+
+/* Стили для второй колонки */
+.column2 {
+    background-color: #D8D8D8;
+    width: calc(500px / 2 - 2px); 
+    height: 40px;
+}
+
+/* Кнопки удаления */
+.delete-button, .delete-button2 {
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    background-image: url("../img/delete1.png");
+    border: none;
+    background-size: cover;
+}
+
+/* Ховер для кнопок удаления */
+.delete-button:hover, .delete-button2:hover {
+    background-image: url("../img/delete.png");
+    transform: scale(1.1);
+}
+
+/* Границы для новых строк */
+.last-tr {
+    border-top: 1px solid black;
+}
+
+/* Подсказки (tooltip) */
+.tooltip {
+    display: none;
+    position: absolute;
+    height: max-content;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 180px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 5px 10px;
+    bottom: 25px;
+    left: 40px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* Кнопка сброса */
+.reset-button {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10px;
+    align-items: center;
+    width: 176px;
+    height: 38px;
+    background-color: #ADADAD;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+/* Изображение для кнопки сброса */
+.reset-button-img {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+}
+
+/* Мобильные стили */
+@media (max-width: 420px) {
+    h1 {
+        font-size: 36px; 
+    }
+
+    .input-wrapper {
+        width: 328px;
+        height: 56px;
+    }
+
+    input {
+        font-size: 15px; 
+    }
+
+    table {
+        margin-top: 48px;
+        width: 328px;
+    }
+
+    .delete-button, .delete-button2 {
+        height: 24px;
+        width: 24px;
+    }
+}
